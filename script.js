@@ -1,4 +1,14 @@
 
+window.addEventListener('scroll', function() {
+    const menu = document.getElementById('menu');
+    const headerHeight = document.querySelector('.header').offsetHeight;
+
+    if (window.scrollY > headerHeight) {
+        menu.classList.add('fixed-menu');
+    } else {
+        menu.classList.remove('fixed-menu');
+    }
+});
 
 const menuBtns = document.querySelectorAll('.menu-btn');
 const foodItems = document.querySelectorAll('.food-item');
